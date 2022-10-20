@@ -5,7 +5,8 @@
     --fontsize-double: 3.2rem;
     --fontsize-triple: 4.8rem;
     --editor-height: 60vh;
-    --editor-bg: rgba(0,0,0,.7);
+    --editor-bg: rgba(0,0,0,.6);
+    --header-bg: var(--color-black)
 }
 
 [contenteditable] {
@@ -23,7 +24,7 @@ header {
     height: var(--fontsize-triple);
     width: 100%;
     margin-bottom: var(--fontsize-triple);
-    background: red;
+    background: var(--header-bg);
 }
 
 main {
@@ -43,9 +44,13 @@ main {
 }
 
 .editor-placeholder {
-    color: gray;
+    color: lightgray;
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
+}
+
+.hidden {
+    visibility: hidden;
 }
