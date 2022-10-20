@@ -1,0 +1,51 @@
+:root {
+    --color-white: ghostwhite;
+    --color-black: #2f2f2f; /*rgba(47,47,47,0)*/
+    --fontsize-default: 1.6rem;
+    --fontsize-double: 3.2rem;
+    --fontsize-triple: 4.8rem;
+    --editor-height: 60vh;
+    --editor-bg: rgba(0,0,0,.7);
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: .675%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    height: var(--fontsize-triple);
+    width: 100%;
+    margin-bottom: var(--fontsize-triple);
+    background: red;
+}
+
+main {
+    margin: auto;
+    min-height: var(--editor-height);
+    width: 60%;
+    padding: var(--fontsize-double);
+    font-size: var(--fontsize-default);
+    background: var(--editor-bg);
+    color: var(--color-white);
+    border: 0 solid (var(--editor-bg));
+    border-radius: 2%;
+}
+
+.editor {
+    position: relative;
+}
+
+.editor-placeholder {
+    color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
