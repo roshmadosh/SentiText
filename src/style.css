@@ -6,7 +6,8 @@
     --fontsize-triple: 4.8rem;
     --editor-height: 60vh;
     --editor-bg: rgba(0,0,0,.6);
-    --header-bg: var(--color-black)
+    --header-bg: var(--color-black);
+    --editor-ff: 'Fuzzy Bubbles', cursive;
 }
 
 [contenteditable] {
@@ -41,6 +42,7 @@ main {
 
 .editor {
     position: relative;
+    font-family: var(--editor-ff);
 }
 
 .editor-placeholder {
