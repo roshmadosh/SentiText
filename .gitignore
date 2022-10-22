@@ -1,3 +1,6 @@
 target/
 env/
 __pycache__/
+
+# downloaded model, app needs to fetch on each load. If restarting app, make sure to delete this directory.
+cardiffnlp/
