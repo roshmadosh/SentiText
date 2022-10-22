@@ -28,6 +28,7 @@ ws.onmessage = event => {
 
     if (isEditorEmpty(text)) {
         document.body.style.backgroundColor = 'ghostwhite';
+        return;
     }
 
     const pre_scores = [NEGATIVE, NEUTRAL, POSITIVE];
