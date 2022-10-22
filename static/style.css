@@ -1,6 +1,7 @@
 :root {
     --color-white: ghostwhite;
     --color-black: #2f2f2f; /*rgba(47,47,47,0)*/
+    --fontsize-small: 1.2rem;
     --fontsize-default: 1.6rem;
     --fontsize-double: 3.2rem;
     --fontsize-triple: 4.8rem;
@@ -8,6 +9,13 @@
     --editor-bg: rgba(0,0,0,.6);
     --header-bg: var(--color-black);
     --editor-ff: 'Fuzzy Bubbles', cursive;
+    --editor-padding: var(--fontsize-double);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 [contenteditable] {
@@ -24,7 +32,7 @@ body {
 header {
     height: var(--fontsize-triple);
     width: 100%;
-    margin-bottom: var(--fontsize-triple);
+    margin-bottom: var(--fontsize-default);
     background: var(--header-bg);
     display: flex;
     justify-content: center;
@@ -37,29 +45,53 @@ h1 {
 
 main {
     margin: auto;
-    min-height: var(--editor-height);
     width: 60%;
-    padding: var(--fontsize-double);
-    font-size: var(--fontsize-default);
-    background: var(--editor-bg);
-    color: var(--color-white);
-    border: 0 solid (var(--editor-bg));
+}
+
+.legend {
+    background: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--fontsize-default);
+    font-size: var(--fontsize-small);
+    padding: var(--editor-padding);
     border-radius: 2%;
 }
 
 .editor {
     position: relative;
+    font-size: var(--fontsize-default);
     font-family: var(--editor-ff);
+    padding: var(--editor-padding);
+    background: var(--editor-bg);
+    color: var(--color-white);
+    border: 0 solid (var(--editor-bg));
+    min-height: var(--editor-height);
+    border-radius: 2%;
 }
 
 .editor-placeholder {
     color: lightgray;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: var(--editor-padding);
+    left: var(--editor-padding);
     pointer-events: none;
 }
 
 .hidden {
     visibility: hidden;
+}
+
+.info-text {
+    font-weight: 700;
+}
+
+.negative-text {
+    color: red;
+}
+
+.neutral-text {
+    color: green;
+}
+
+.positive-text {
+    color: blue;
 }

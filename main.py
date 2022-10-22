@@ -2,7 +2,6 @@ from fastapi import FastAPI, Request, WebSocket
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
-# from fastapi_socketio import SocketManager
 from analyzer import analyze_text
 
 app = FastAPI()
@@ -20,8 +19,9 @@ async def test(websocket: WebSocket):
     while True:
         request = await websocket.receive_text()
         result = analyze_text(request)
-        serialized = [str(val) for val in result]
+        serialized = [str(val) for val in result['scores']]
         await websocket.send_json({
+            "text": result['text'],
             "NEGATIVE": serialized[0],
             "NEUTRAL": serialized[1],
             "POSITIVE": serialized[2]

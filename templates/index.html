@@ -14,15 +14,20 @@
     <header>
         <h1>SentiText</h1>
     </header>
-    <button class="click-me">Click Me</button>
-    <div id="message">hi</div>
-    <div id="number">0</div>
+
     <main>
+        <div class="legend">
+            <p class="info">A <span class="info-text negative-text">red</span> background indicates <em>negative</em> sentiment.
+            A <span class="info-text neutral-text">green</span> background indicates <em>neutral</em> sentiment.
+            A <span class="info-text positive-text">blue</span> background indicates <em>positive</em> sentiment.
+            </p>
+        </div>
         <div class="editor">
             <span class="editor-placeholder">Write text here...</span>
             <p id="editor-text" contenteditable="true"></p>
         </div>
     </main>
+
     <script src="../static/socket.js"></script>
     <script src="../static/index.js"></script>
 </body>
