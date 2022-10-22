@@ -35,8 +35,7 @@ ws.onmessage = event => {
     const rgb = []
     pre_scores.forEach(score => { rgb.push(parseFloat(score) * 255); })
     
-    color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
-
+    let color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
     document.body.style.backgroundColor = color;
 }   
 
