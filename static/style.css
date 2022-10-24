@@ -10,6 +10,7 @@
     --header-bg: var(--color-black);
     --editor-ff: 'Fuzzy Bubbles', cursive;
     --editor-padding: var(--fontsize-double);
+    --legend-padding: var(--fontsize-default);
 }
 
 * {
@@ -53,8 +54,15 @@ main {
     background: rgba(255, 255, 255, 0.7);
     margin-bottom: var(--fontsize-default);
     font-size: var(--fontsize-small);
-    padding: var(--editor-padding);
+    padding: var(--legend-padding);
     border-radius: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info {
+    display: inline-block;
+    width: 220px;
 }
 
 .editor {
