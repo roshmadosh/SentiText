@@ -1,5 +1,6 @@
 const ws = new WebSocket("ws://localhost:8000/test")
 
+// --[DOM ACCESSORS]-- //
 const editorText = document.getElementById("editor-text");
 const editorPlaceholder = document.querySelector('.editor-placeholder');
 const clickMe = document.querySelector('.click-me');
