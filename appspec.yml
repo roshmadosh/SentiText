@@ -5,10 +5,10 @@ files:
   destination: /sentitext
 hooks:
   AfterInstall:
-    - location: scripts/install_app_dependencies
+    - location: scripts/install_app_dependencies.sh
       timeout: 120
       runas: root
   ApplicationStart:
-    - location: scripts/start_server
+    - location: scripts/start_server.sh
       timeout: 120
       runas: root
