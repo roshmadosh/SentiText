@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /randomness/src
+cd /sentitext/src
 
 sudo pip3 install -r requirements.txt

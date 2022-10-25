@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-  destination: /randomness
+    destination: /sentitext
 hooks:
   BeforeInstall:
     - location: scripts/install_app_dependencies.sh

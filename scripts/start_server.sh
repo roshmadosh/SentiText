@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /randomness/src
+cd /sentitext/src
 
 uvicorn main:app
