@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /sentitext
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: scripts/install_app_dependencies.sh
       timeout: 60
       runas: root
