@@ -1,4 +1,4 @@
-const ws = new WebSocket("ws:// 3.235.159.142:8000/test")
+const ws = new WebSocket("ws://3.235.159.142:8000/test")
 
 // --[DOM ACCESSORS]-- //
 const editorText = document.getElementById("editor-text");
